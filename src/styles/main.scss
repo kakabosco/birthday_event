@@ -1,0 +1,13 @@
+@use "variables";
+@use "hero";
+@use "event";
+@use "./components/buttons";
+@use "./components/infos-bar";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+    scroll-behavior: smooth;
+}
