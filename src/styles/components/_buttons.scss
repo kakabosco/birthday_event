@@ -1,3 +1,5 @@
+@use "../variables";
+
 .button {
     padding: 12px;
     font-size: 18px;
@@ -7,9 +9,21 @@
     white-space: nowrap;
     border-radius: 10px;
     color: #fff;
-    background-color: #547062;
+    background-color: variables.$buttonColor;
+    transition: transform 0.5s ease, background-color 0.5s ease;
 
     &:hover {
-        background-color: #72857b;
+        transform: scale(1.05);
+        background-color: variables.$hoverButtonColor;
+    }
+
+    @media (max-width: variables.$sm-desktop) {
+        display: flex;
+        align-items: center;
+    }
+
+    @media (max-width: variables.$mobile) {
+        display: block;
+        width: 100%;
     }
 }

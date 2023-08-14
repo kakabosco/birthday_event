@@ -1,7 +1,8 @@
+@use "variables";
+
 .hero {
     position: relative;
-    padding-top: 72px;
-    padding-bottom: 72px;
+    padding: 72px 0;
     background-image: url(../images/birthday_hero.jpg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -34,5 +35,25 @@
         display: flex;
         margin: 0 auto;
         height: 100px;
+    }
+
+    @media (max-width: variables.$sm-desktop) {
+        &__text {
+            font-size: 32px;
+        }
+    }
+
+    @media (max-width: variables.$mobile) {
+        padding: 36px 0;
+
+        &__logo {
+            height: 60px;
+        }
+
+        &__text {
+            font-size: 20px;
+            line-height: 32px;
+            margin: 24px 0;
+        }
     }
 }

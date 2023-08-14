@@ -11,10 +11,23 @@
     font-family: "Montserrat", sans-serif;
     scroll-behavior: smooth;
     list-style: none;
+    color: variables.$mainTextColor;
 }
 
 .container {
     max-width: 920px;
     width: 100%;
     margin: 0 auto;
+
+    @media (max-width: variables.$sm-desktop) {
+        max-width: 90%;
+    }
+
+    @media (max-width: variables.$mobile) {
+        max-width: 80%;
+    }
+}
+
+span {
+    color: #fff;
 }

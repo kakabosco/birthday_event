@@ -1,3 +1,5 @@
+@use "../variables";
+
 .infos-bar {
     padding: 16px 24px;
     display: flex;
@@ -5,19 +7,43 @@
     background-color: #fff;
     border-radius: 10px;
 
+    @media (max-width: variables.$mobile) {
+        display: block;
+    }
+
     &__infos {
         display: flex;
 
+        @media (max-width: variables.$sm-desktop) {
+            margin: 0 16px;
+            justify-content: space-between;
+        }
+
+        @media (max-width: variables.$mobile) {
+            display: block;
+            margin: 0;
+        }
+
         &__item {
             font-size: 14px;
-            color: #000;
+
+            @media (max-width: variables.$mobile) {
+                margin-bottom: 16px;
+            }
 
             &:nth-child(2) {
                 margin: 0 40px;
+
+                @media (max-width: variables.$sm-desktop) {
+                    margin: 0 24px;
+                }
+
+                @media (max-width: variables.$mobile) {
+                    margin: 0 0 16px;
+                }
             }
 
             b {
-                color: #000;
                 font-size: 18px;
                 display: block;
             }
