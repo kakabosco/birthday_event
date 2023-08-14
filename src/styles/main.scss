@@ -10,4 +10,11 @@
     box-sizing: border-box;
     font-family: "Montserrat", sans-serif;
     scroll-behavior: smooth;
+    list-style: none;
+}
+
+.container {
+    max-width: 920px;
+    width: 100%;
+    margin: 0 auto;
 }
